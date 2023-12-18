@@ -1,5 +1,6 @@
 import React from "react";
-import Buttons, { OutlineButton, IconButton, Textbutton } from "./buttons";
+import { FaSave } from "react-icons/fa";
+import Buttons from "./buttons";
 
 export default {
   title: "Buttons",
@@ -7,30 +8,92 @@ export default {
 };
 
 export const listButton = () => (
-  <Buttons
-    message1="PRIMARY BUTTON"
-    message2="SECONDARY BUTTON"
-    message3="SUCCESS BUTTON"
-    message4="WARNING BUTTON"
-  />
+  <div>
+    <Buttons type="primary" variant="contained" text="PRIMARY BUTTON" />
+    <Buttons type="secondary" variant="contained" text="SECONDARY BUTTON" />
+    <Buttons type="success" variant="contained" text="SUCCESS BUTTON" />
+    <Buttons type="warning" variant="contained" text="WARNING BUTTON" />
+  </div>
 );
+
 export const OutlineButtons = () => (
-  <OutlineButton
-    message1="PRIMARY BUTTON"
-    message2="SECONDARY BUTTON"
-    message3="SUCCESS BUTTON"
-    message4="WARNING BUTTON"
-  />
+  <div>
+    <Buttons type="primary" variant="outline" text="PRIMARY BUTTON" isOutline />
+    <Buttons
+      type="secondary"
+      variant="outlined"
+      text="SECONDARY BUTTON"
+      isOutline
+    />
+    <Buttons
+      type="success"
+      variant="outlined"
+      text="SUCCESS BUTTON"
+      isOutline
+    />
+    <Buttons
+      type="warning"
+      variant="outlined"
+      text="WARNING BUTTON"
+      isOutline
+    />
+  </div>
 );
+
 export const IconButtons = () => (
-  <IconButton message1="SAVE BUTTON" message2="SAVE BUTTON" />
+  <div>
+    <Buttons
+      type="primary"
+      variant="outlined"
+      text="SAVE BUTTON"
+      isOutline
+      icon={<FaSave />}
+    />
+    <Buttons
+      type="primary"
+      variant="contained"
+      text="SAVE BUTTON"
+      icon={<FaSave />}
+    />
+  </div>
 );
 
 export const TextButtons = () => (
-  <Textbutton
-    message1="PRIMARY BUTTON"
-    message2="SECONDARY BUTTON"
-    message3="SUCCESS BUTTON"
-    message4="WARNING BUTTON"
-  />
+  <div>
+    <Buttons
+      type="primary"
+      variant="contained"
+      text="PIRMARY LINK BUTTON"
+      isOutline
+      border
+      disableHover
+      
+    />
+    <Buttons
+      type="secondary"
+      variant="contained"
+      text="SECONDARY LINK BUTTON"
+      isOutline
+      border
+      disableHover
+    
+    />
+    <Buttons
+      type="success"
+      variant="contained"
+      text="SUCCESS LINK BUTTON"
+      isOutline
+      border
+      disableHover
+
+    />
+    <Buttons
+      type="warning"
+      variant="contained"
+      text="WARNING LINK BUTTON"
+      isOutline
+      border
+      disableHover
+    />
+  </div>
 );
