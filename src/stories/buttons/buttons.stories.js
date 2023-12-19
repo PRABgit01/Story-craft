@@ -1,93 +1,93 @@
 import React from "react";
 import { FaSave } from "react-icons/fa";
-import Buttons from "./buttons";
+import Button from "./Buttons";
+import { StyledContainer } from "./Buttons.style";
 
 export default {
   title: "Buttons",
-  component: Buttons,
+  component: Button,
 };
 
 export const listButton = () => (
-  <div>
-    <Buttons type="primary" variant="contained" text="PRIMARY BUTTON" />
-    <Buttons type="secondary" variant="contained" text="SECONDARY BUTTON" />
-    <Buttons type="success" variant="contained" text="SUCCESS BUTTON" />
-    <Buttons type="warning" variant="contained" text="WARNING BUTTON" />
-  </div>
+  <StyledContainer>
+    <Button type="primary" variant="contained" text="PRIMARY BUTTON" />
+    <Button type="secondary" variant="contained" text="SECONDARY BUTTON" />
+    <Button type="success" variant="contained" text="SUCCESS BUTTON" />
+    <Button type="warning" variant="contained" text="WARNING BUTTON" />
+  </StyledContainer>
 );
 
 export const OutlineButtons = () => (
-  <div>
-    <Buttons type="primary" variant="outline" text="PRIMARY BUTTON" isOutline />
-    <Buttons
+  <StyledContainer>
+     <Button type="primary" variant="outline" text="PRIMARY BUTTON" isOutline />
+    <Button
       type="secondary"
       variant="outlined"
       text="SECONDARY BUTTON"
       isOutline
     />
-    <Buttons
+    <Button
       type="success"
       variant="outlined"
       text="SUCCESS BUTTON"
       isOutline
     />
-    <Buttons
+    <Button
       type="warning"
       variant="outlined"
       text="WARNING BUTTON"
       isOutline
     />
-  </div>
+  </StyledContainer>
+   
+
 );
 
 export const IconButtons = () => (
-  <div>
-    <Buttons
+  <StyledContainer>
+     <Button
       type="primary"
       variant="outlined"
       text="SAVE BUTTON"
       isOutline
       icon={<FaSave />}
     />
-    <Buttons
+    <Button
       type="primary"
       variant="contained"
       text="SAVE BUTTON"
       icon={<FaSave />}
     />
-  </div>
+  </StyledContainer>  
 );
 
 export const TextButtons = () => (
-  <div>
-    <Buttons
+<StyledContainer>
+<Button
       type="primary"
       variant="contained"
       text="PIRMARY LINK BUTTON"
       isOutline
       border
       disableHover
-      
     />
-    <Buttons
+    <Button
       type="secondary"
       variant="contained"
       text="SECONDARY LINK BUTTON"
       isOutline
       border
       disableHover
-    
     />
-    <Buttons
+    <Button
       type="success"
       variant="contained"
       text="SUCCESS LINK BUTTON"
       isOutline
       border
       disableHover
-
     />
-    <Buttons
+    <Button
       type="warning"
       variant="contained"
       text="WARNING LINK BUTTON"
@@ -95,5 +95,7 @@ export const TextButtons = () => (
       border
       disableHover
     />
-  </div>
+  
+</StyledContainer>
+  
 );

@@ -1,8 +1,16 @@
 import React from "react";
 
-import { StyledButtonComponent } from "./buttons.style";
+import { StyledButtonComponent } from "./Buttons.style";
 
-const Buttons = ({ type, variant, text, icon, isOutline, border,disableHover }) => {
+const Button = ({
+  type,
+  variant,
+  text,
+  icon,
+  isOutline,
+  border,
+  disableHover,
+}) => {
   return (
     <StyledButtonComponent
       type={type}
@@ -16,4 +24,4 @@ const Buttons = ({ type, variant, text, icon, isOutline, border,disableHover }) 
   );
 };
 
-export default Buttons;
+export default Button;
