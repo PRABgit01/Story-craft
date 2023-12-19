@@ -1,6 +1,6 @@
 import React from "react";
 
-import { StyledButtonComponent } from "./Buttons.style";
+import { StyledButtonComponent } from "./buttons.style";
 
 const Button = ({
   type,

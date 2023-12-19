@@ -2,6 +2,7 @@ import styled, { css } from "styled-components";
 import theme from "../theme";
 
 export const StyledButtonComponent = styled.button`
+  text-transform: uppercase;
   display: inline-block;
   font-size: 1.4rem;
   font-weight: 600;
