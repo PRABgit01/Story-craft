@@ -6,9 +6,9 @@ export const StyledButtonComponent = styled.button`
   font-size: 1.4rem;
   font-weight: 600;
   width: max-content;
-  border: 2px solid ;
+  border: 2px solid;
 
-  ${({ type, isOutline,border  }) => css`
+  ${({ type, isOutline, border }) => css`
     background-color: ${isOutline ? "transparent" : theme?.[type]};
     color: ${isOutline ? theme?.[type] : "white"};
 
@@ -27,12 +27,12 @@ export const StyledButtonComponent = styled.button`
     color: ${isOutline ? theme?.[type] : "white"};
 
     ${!disableHover &&
-      css`
-        &:hover,
-        &:active {
-          background-color: ${isOutline ? theme?.[type] : theme?.[type]};
-          color: white;
-        }
-      `}
+    css`
+      &:hover,
+      &:active {
+        background-color: ${isOutline ? theme?.[type] : theme?.[type]};
+        color: white;
+      }
+    `}
   `}
 `;
