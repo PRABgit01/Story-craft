@@ -1,9 +1,8 @@
 import React from "react";
+import { TextType } from "./Typography.style";
 
-export const Typography=()=>{
-    return(
-        <div>
-            hah
-        </div>
-    )
-}
+const Typography = ({ htmltag ,text,type,value }) => {
+  return (<TextType as={htmltag} fontSize={value} type={type} >{text}  </TextType>);
+};
+
+export default Typography;
