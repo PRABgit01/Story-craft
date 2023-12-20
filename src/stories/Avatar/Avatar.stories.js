@@ -9,7 +9,7 @@ export default{
 
 export const CircularProfileAvatar =()=>(
 <AvtarConatiner>
-<Avatar url="https://i.pravatar.cc/40" />
+<Avatar url="https://i.pravatar.cc/40" size={1.3} alt="avatar-2" variant="circle" />
 <Avatar url="https://i.pravatar.cc/90"  size={2.3} alt="avatar-2" variant="circle"/>
 <Avatar url="https://i.pravatar.cc/100" size={3.3} alt="avatar-3" variant="circle"/>
 </AvtarConatiner>
