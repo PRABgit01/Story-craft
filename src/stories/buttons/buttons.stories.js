@@ -19,15 +19,10 @@ export const listButton = () => (
 
 export const OutlineButtons = () => (
   <StyledContainer>
-    <Button type="primary" variant="outline" text="PRIMARY BUTTON" isOutline />
-    <Button
-      type="secondary"
-      variant="outlined"
-      text="SECONDARY BUTTON"
-      isOutline
-    />
-    <Button type="success" variant="outlined" text="SUCCESS BUTTON" isOutline />
-    <Button type="warning" variant="outlined" text="WARNING BUTTON" isOutline />
+    <Button type="primary" variant="outlined" text="PRIMARY BUTTON" />
+    <Button type="secondary" variant="outlined" text="SECONDARY BUTTON" />
+    <Button type="success" variant="outlined" text="SUCCESS BUTTON" />
+    <Button type="warning" variant="outlined" text="WARNING BUTTON" />
   </StyledContainer>
 );
 
@@ -36,14 +31,13 @@ export const IconButtons = () => (
     <Button
       type="primary"
       variant="outlined"
-      text="SAVE BUTTON"
-      isOutline
+      text="save button"
       icon={<FaSave />}
     />
     <Button
       type="primary"
       variant="contained"
-      text="SAVE BUTTON"
+      text="save button"
       icon={<FaSave />}
     />
   </StyledContainer>
@@ -51,37 +45,9 @@ export const IconButtons = () => (
 
 export const TextButtons = () => (
   <StyledContainer>
-    <Button
-      type="primary"
-      variant="contained"
-      text="PIRMARY LINK BUTTON"
-      isOutline
-      border
-      disableHover
-    />
-    <Button
-      type="secondary"
-      variant="contained"
-      text="SECONDARY LINK BUTTON"
-      isOutline
-      border
-      disableHover
-    />
-    <Button
-      type="success"
-      variant="contained"
-      text="SUCCESS LINK BUTTON"
-      isOutline
-      border
-      disableHover
-    />
-    <Button
-      type="warning"
-      variant="contained"
-      text="WARNING LINK BUTTON"
-      isOutline
-      border
-      disableHover
-    />
+    <Button type="primary" variant="TextButton" text="PIRMARY LINK BUTTON" />
+    <Button type="secondary" variant="TextButton" text="SECONDARY LINK BUTTON"/>
+    <Button type="success" variant="TextButton" text="SUCCESS LINK BUTTON" />
+    <Button type="warning" variant="TextButton" text="WARNING LINK BUTTON" />
   </StyledContainer>
 );

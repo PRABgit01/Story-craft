@@ -3,35 +3,38 @@ import theme from "../theme";
 
 export const StyledButtonComponent = styled.button`
   text-transform: uppercase;
-  display: inline-block;
-  font-size: 1.4rem;
+  border: 2px solid ${theme.white};
+
+  font-size: 1rem;
   font-weight: 600;
-  border: 2px solid;
+  background-color: ${({ colorInput }) =>
+    colorInput === "secondary" ? theme.white : theme?.[colorInput]};
 
-  ${({ type, isOutline, border }) => css`
-    background-color: ${isOutline ? "transparent" : theme?.[type]};
-    color: ${isOutline ? theme?.[type] : theme.white};
-    border-color: ${border ? "transparent" : theme?.[type]};
-  `}
+  color: ${({ colorInput }) =>
+    colorInput === "secondary" ? theme?.[colorInput] : theme.white};
 
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
   padding: 10px 20px;
   text-align: center;
   text-decoration: none;
-  font-size: 16px;
   cursor: pointer;
+`;
 
-  ${({ type, isOutline, disableHover }) => css`
-    background-color: ${isOutline ? "transparent" : theme?.[type]};
-    color: ${isOutline ? theme?.[type] : theme.white};
-    ${!disableHover &&
-    css`
-      &:hover,
-      &:active {
-        background-color: ${isOutline ? theme?.[type] : theme?.[type]};
-        color: white;
-      }
-    `}
-  `}
+export const OutlineButton = styled(StyledButtonComponent)`
+  border: 2px solid ${({ colorInput }) => theme?.[colorInput]};
+  background-color: ${theme.white};
+  color: ${({ colorInput }) => theme?.[colorInput]};
+  &:hover,
+  &:active {
+    background-color: ${({ colorInput }) => theme?.[colorInput]};
+    color: ${theme.white};
+  }
+`;
+export const ButtonText = styled(StyledButtonComponent)`
+  color: ${({ colorInput }) => theme?.[colorInput]};
+  border: 2px solid transparent;
+  background-color: transparent;
 `;
 
 export const StyledContainer = styled.div`

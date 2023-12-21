@@ -1,27 +1,31 @@
 import React from "react";
+import {
+  StyledButtonComponent,
+  OutlineButton,
+  ButtonText,
+} from "./buttons.style";
 
-import { StyledButtonComponent } from "./buttons.style";
+const Button = ({ type, variant, text, icon }) => {
+  if (variant === "contained") {
+    return (
+      <StyledButtonComponent colorInput={type}>
+        {icon} {text}
+      </StyledButtonComponent>
+    );
+  }
 
-const Button = ({
-  type,
-  variant,
-  text,
-  icon,
-  isOutline,
-  border,
-  disableHover,
-}) => {
-  return (
-    <StyledButtonComponent
-      type={type}
-      variant={variant}
-      isOutline={isOutline}
-      border={border}
-      disableHover={disableHover}
-    >
-      {icon} {text}
-    </StyledButtonComponent>
-  );
+  if (variant === "outlined") {
+    return (
+      <OutlineButton colorInput={type}>
+        {icon} {text}
+      </OutlineButton>
+    );
+  }
+  if (variant === "TextButton") {
+    return <ButtonText colorInput={type}>{text}</ButtonText>;
+  }
+
+  return null;
 };
 
 export default Button;
