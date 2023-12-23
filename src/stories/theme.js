@@ -1,7 +1,7 @@
 // theme.js
 const theme = {
   primary: "#FF4E54",
-  secondary: "#FF8242",
+  secondary: "#4a4a68",
   success: "#07CB6E",
   warning: "#F3B664",
   cardBorderColor: "#E49393",

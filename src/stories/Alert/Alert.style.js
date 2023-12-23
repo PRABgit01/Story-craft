@@ -6,15 +6,18 @@ export const AlertStyles = styled.button`
   border-radius: 3px;
   font-family: sans-serif;
   text-align: left;
-  border: 1px solid ${({type})=>theme?.[type]};
+  border: 1px solid ${theme.white};
   padding: 10px 20px;
   font-family: "Rubik", sans-serif;
   gap: 1rem;
   font-size: 1.2rem;
   font-weight: 600;
   cursor: pointer;
-  color: ${theme.white};
-  background-color: ${({type})=>theme?.[type]};
+  color: ${({ type }) =>
+    type === "secondary" ? theme?.[type] : theme.white};
+
+  background-color: ${({ type }) =>
+    type === "secondary" ? theme.white : theme?.[type]};
 `;
 
 export const OutlineAlertStyle=styled(AlertStyles)`
