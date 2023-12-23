@@ -1,15 +1,16 @@
 import React from "react";
-import { AlertStyles } from "./Alert.style";
+import { AlertStyles,OutlineAlertStyle } from "./Alert.style";
 
-export const AlertComponent = ({ color, variant, text, isOutline, border }) => {
-  return (
-    <AlertStyles
-      colorinput={color}
-      variant={variant}
-      isOutline={isOutline}
-      border={border}
-    >
-      {text}
-    </AlertStyles>
-  );
+export const AlertComponent = ({ type, variant, text }) => {
+
+  if(variant=="contained"){
+    return(
+      <AlertStyles type={type} >{text}</AlertStyles>
+    )
+  }
+  if(variant=="outline"){
+    return(
+    <OutlineAlertStyle type={type} >{text}</OutlineAlertStyle>)
+  }
+  return null;
 };

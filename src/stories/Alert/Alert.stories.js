@@ -3,29 +3,29 @@ import { AlertComponent } from "./Alert";
 import { AlertContainer } from "./Alert.style";
 
 export default {
-  title: "Alerts",
+  title: "Alert",
   component: AlertComponent,
 };
 
-export const SimpleAlert = () => (
+export const ContainedAlert = () => (
   <AlertContainer>
     <AlertComponent
-      color="primary"
+      type="primary"
       variant="contained"
       text="Primary! This is a Primary Alert - Check it now!"
     />
     <AlertComponent
-      color="secondary"
+      type="secondary"
       variant="contained"
       text="secondary! This is a Primary Alert - Check it now!"
     />
     <AlertComponent
-      color="success"
+      type="success"
       variant="contained"
       text="success! This is a Primary Alert - Check it now!"
     />
     <AlertComponent
-      color="warning"
+      type="warning"
       variant="contained"
       text="warning! This is a Primary Alert - Check it now!"
     />
@@ -35,26 +35,26 @@ export const SimpleAlert = () => (
 export const OutlineAlert = () => (
   <AlertContainer>
     <AlertComponent
-      color="primary"
-      variant="contained"
+      type="primary"
+      variant="outline"
       isOutline
       text="Primary! This is a Primary Alert - Check it now!"
     />
     <AlertComponent
-      color="secondary"
-      variant="contained"
+      type="secondary"
+      variant="outline"
       isOutline
       text="secondary! This is a Primary Alert - Check it now!"
     />
     <AlertComponent
-      color="success"
-      variant="contained"
+      type="success"
+      variant="outline"
       isOutline
       text="success! This is a Primary Alert - Check it now!"
     />
     <AlertComponent
-      color="warning"
-      variant="contained"
+      type="warning"
+      variant="outline"
       isOutline
       text="warning! This is a Primary Alert - Check it now!"
     />

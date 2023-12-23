@@ -3,28 +3,27 @@ import theme from "../theme";
 
 export const AlertStyles = styled.button`
   width: 100%;
-  border-radius: 2%;
+  border-radius: 3px;
+  font-family: sans-serif;
   text-align: left;
-  border: 1px solid;
+  border: 1px solid ${({type})=>theme?.[type]};
   padding: 10px 20px;
   font-family: "Rubik", sans-serif;
   gap: 1rem;
-  ${({ colorinput, isOutline, border }) => css`
-    background-color: ${isOutline ? "transparent" : theme?.[colorinput]};
-    color: ${isOutline ? theme?.[colorinput] : theme.white};
-    border-color: ${border ? "transparent" : theme?.[colorinput]};
-  `}
-
   font-size: 1.2rem;
   font-weight: 600;
-  ${({ colorinput, isOutline, border }) => css`
-    background-color: ${isOutline ? "transparent" : theme?.[colorinput]};
-    color: ${isOutline ? theme?.[colorinput] : theme.white};
-    border-color: ${border ? "transparent" : theme?.[colorinput]};
-  `}
   cursor: pointer;
+  color: ${theme.white};
+  background-color: ${({type})=>theme?.[type]};
 `;
 
+export const OutlineAlertStyle=styled(AlertStyles)`
+  background-color: transparent;
+  border: 1px solid ${({type})=>theme?.[type]};
+  color: ${({type})=>theme?.[type]};
+
+
+`
 export const AlertContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
