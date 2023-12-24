@@ -15,6 +15,7 @@ const theme = {
   buttonOutlinedSecondaryBgHover: "#E26EE5",
   buttonOutlinedSecondaryColorHover: "#fff",
   badgeBg: "#FF3D00",
+  dangerHover: "#d31609",
   badgeText: "#fff",
   white: "#f6f9fc",
 };

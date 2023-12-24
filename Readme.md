@@ -8,15 +8,15 @@
 
 
 ### component that are going to be get updated in this StoryBook
-* Buttons   ✅
-* Typography 
-* Alert  
-* Avatar.   
-* Badges. 
-* Images. 
-* Input      
-* Toast     
-* Card.    
+* ``` Buttons   ✅ ```
+* ``` Typography ✅ ```
+* ``` Alert  ✅ ```
+* ``` Avatar ✅ ```
+* ``` Badges ✅ ```
+* ``` Images ✅ ```
+* ``` Input  ✅ ```    
+* ``` Toast  ✅ ```   
+* Card    
 * Navbar
 
 ## Features 
