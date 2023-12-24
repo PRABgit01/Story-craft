@@ -1,7 +1,7 @@
 // theme.js
 const theme = {
   primary: "#FF4E54",
-  secondary: "#4a4a68",
+  secondary: "#FF8242",
   success: "#07CB6E",
   warning: "#F3B664",
   cardBorderColor: "#E49393",
@@ -15,6 +15,7 @@ const theme = {
   buttonOutlinedSecondaryBgHover: "#E26EE5",
   buttonOutlinedSecondaryColorHover: "#fff",
   badgeBg: "#FF3D00",
+  dangerHover: "#d31609",
   badgeText: "#fff",
   white: "#f6f9fc",
 };
