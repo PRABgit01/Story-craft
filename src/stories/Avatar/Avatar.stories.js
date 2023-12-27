@@ -12,19 +12,19 @@ export const CircularProfileAvatar = () => (
     <Avatar
       url="https://i.pravatar.cc/40"
       type="small"
-      alt="avatar-2"
+      alt="CircleAvatarSmall"
       variant="circle"
     />
     <Avatar
       url="https://i.pravatar.cc/90"
       type="medium"
-      alt="avatar-2"
+      alt="CircleAvatarMedium"
       variant="circle"
     />
     <Avatar
       url="https://i.pravatar.cc/100"
       type="large"
-      alt="avatar-3"
+      alt="CircleAvatarLarge"
       variant="circle"
     />
   </AvtarConatiner>
@@ -32,8 +32,20 @@ export const CircularProfileAvatar = () => (
 
 export const SquareProfileAvatar = () => (
   <AvtarConatiner>
-    <Avatar url="https://i.pravatar.cc/10" type="small" alt="avatar-1" />
-    <Avatar url="https://i.pravatar.cc/40" type="medium" alt="avatar-2" />
-    <Avatar url="https://i.pravatar.cc/10" type="large" alt="avatar-3" />
+    <Avatar
+      url="https://i.pravatar.cc/10"
+      type="small"
+      alt="squareAvatarSmall"
+    />
+    <Avatar
+      url="https://i.pravatar.cc/40"
+      type="medium"
+      alt="squareAvataMedium"
+    />
+    <Avatar
+      url="https://i.pravatar.cc/10"
+      type="large"
+      alt="squareAvatarLarge"
+    />
   </AvtarConatiner>
 );

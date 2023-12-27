@@ -17,23 +17,6 @@ const theme = {
   badgeBg: "#FF3D00",
   badgeText: "#fff",
   white: "#f6f9fc",
-  small:{
-    width:'50px',
-    height:'50px'
-},
-medium:{
-    width:'60px',
-    height: '60px'
-}
-,
 
-large:{
-    width:'60px',
-    height:'80px'
-},
-default:{
-    width:'70px',
-    height:'70px'
-}
 };
 export default theme;
