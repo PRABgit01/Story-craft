@@ -17,5 +17,6 @@ const theme = {
   badgeBg: "#FF3D00",
   badgeText: "#fff",
   white: "#f6f9fc",
+
 };
 export default theme;
