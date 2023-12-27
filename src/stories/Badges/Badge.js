@@ -1,26 +1,32 @@
 import React from "react";
-import { ImageContainer, AvatarImage, BadgeIcon,BadgeForIcon,IconImageBadge } from "./Badge.style";
+import {
+  StyledImageContainer,
+  StyledAvatarImage,
+  StyledBadgeIcon,
+  StyledBadgeForIcon,
+  StyledIconImageBadge,
+} from "./Badge.styled";
 
-const Badge = ({ url, type, variant, colorInput,text }) => {
+const Badge = ({ url, type, variant, color, count }) => {
   if (variant === "square") {
     return (
-      <ImageContainer>
-        <AvatarImage type={type} src={url} alt="avatar" />
-        <BadgeIcon colorInput={colorInput} type={type} />
-      </ImageContainer>
-    );
-  }   
-
-  if (variant === "iconBadge") {
-    return (
-      <ImageContainer>
-        <IconImageBadge type={type} src={url} alt="avatar"  />
-        <BadgeForIcon colorInput={colorInput} type={type}>{text}</BadgeForIcon>
-      </ImageContainer>
+      <StyledImageContainer>
+        <StyledAvatarImage type={type} src={url} alt="avatar" />
+        <StyledBadgeIcon color={color} type={type} />
+      </StyledImageContainer>
     );
   }
 
-  return null;
+  if (variant === "iconBadge") {
+    return (
+      <StyledImageContainer>
+        <StyledIconImageBadge type={type} src={url} alt="avatar" />
+        <StyledBadgeForIcon color={color} type={type}>
+          {count}
+        </StyledBadgeForIcon>
+      </StyledImageContainer>
+    );
+  }
 };
 
 export default Badge;
