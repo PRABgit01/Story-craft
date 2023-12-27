@@ -1,12 +1,12 @@
 import React from "react";
 import { ImageContainer, AvatarImage, BadgeIcon,BadgeForIcon,IconImageBadge } from "./Badge.style";
 
-const Badge = ({ url, size, variant, colorInput,text }) => {
+const Badge = ({ url, type, variant, colorInput,text }) => {
   if (variant === "square") {
     return (
       <ImageContainer>
-        <AvatarImage size={size} src={url} alt="avatar" />
-        <BadgeIcon colorInput={colorInput}/>
+        <AvatarImage type={type} src={url} alt="avatar" />
+        <BadgeIcon colorInput={colorInput} type={type} />
       </ImageContainer>
     );
   }   
@@ -14,8 +14,8 @@ const Badge = ({ url, size, variant, colorInput,text }) => {
   if (variant === "iconBadge") {
     return (
       <ImageContainer>
-        <IconImageBadge size={size} src={url} alt="avatar"  />
-        <BadgeForIcon colorInput={colorInput}>{text}</BadgeForIcon>
+        <IconImageBadge type={type} src={url} alt="avatar"  />
+        <BadgeForIcon colorInput={colorInput} type={type}>{text}</BadgeForIcon>
       </ImageContainer>
     );
   }
