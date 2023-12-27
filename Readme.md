@@ -16,7 +16,7 @@
 * Images. 
 * Input      
 * Toast     
-* Card.    
+* ``` Card ✅ ```    
 * Navbar
 
 ## Features 
