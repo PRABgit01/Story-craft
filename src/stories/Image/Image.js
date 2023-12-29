@@ -1,17 +1,21 @@
 import React from "react";
-import { ImageStyle, CircularImageStyle, FullImage } from "./Image.style";
+import {
+  StyledImage,
+  StyledCircularImage,
+  StyledFullImage,
+} from "./Image.style";
 
 export const Image = ({ url, alt, shape }) => {
-  if (shape === "Square") {
-    return <ImageStyle src={url} alt={alt}></ImageStyle>;
+  if (shape === "square") {
+    return <StyledImage src={url} alt={alt}></StyledImage>;
   }
 
   if (shape === "circle") {
-    return <CircularImageStyle src={url} alt={alt}></CircularImageStyle>;
+    return <StyledCircularImage src={url} alt={alt}></StyledCircularImage>;
   }
 
   if (shape === "full") {
-    return <FullImage src={url} alt={alt}></FullImage>;
+    return <StyledFullImage src={url} alt={alt}></StyledFullImage>;
   }
   return null;
 };

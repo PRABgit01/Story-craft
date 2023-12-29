@@ -1,47 +1,47 @@
 import React from "react";
 import { Image } from "./Image";
-import { ImageContainer } from "./Image.style";
+import { StyledImageContainer } from "./Image.style";
 
 export default {
   title: "Images",
 };
 
 export const SquareImage = () => (
-  <ImageContainer>
+  <StyledImageContainer>
     <Image
       url="https://picsum.photos/352/350/?blur"
-      alt="squareimage"
-      shape="Square"
+      alt="SquareImage"
+      shape="square"
     />
     <Image
       url="https://picsum.photos/351/350/?blur"
-      alt="squareimage"
-      shape="Square"
+      alt="SquareImage"
+      shape="square"
     />
-  </ImageContainer>
+  </StyledImageContainer>
 );
 
 export const CircleImage = () => (
-  <ImageContainer>
+  <StyledImageContainer>
     <Image
       url="https://picsum.photos/355/350/?blur"
-      alt="circleimage"
+      alt="CircleImage"
       shape="circle"
     />
     <Image
       url="https://picsum.photos/357/350/?blur"
-      alt="circleimage"
+      alt="CircleImage"
       shape="circle"
     />
-  </ImageContainer>
+  </StyledImageContainer>
 );
 
-export const FullImage = () => (
-  <ImageContainer>
+export const FullWidthImage = () => (
+  <StyledImageContainer>
     <Image
       url="https://picsum.photos/359/350/?blur"
-      alt="fullImage"
+      alt="StyledFullImage"
       shape="full"
     />
-  </ImageContainer>
+  </StyledImageContainer>
 );

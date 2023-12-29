@@ -5,8 +5,8 @@ import {
   ButtonText,
 } from "./Button.style";
 
-const Button = ({ type, shape, text, icon }) => {
-  if (shape === "contained") {
+const Button = ({ type, variant, text, icon }) => {
+  if (variant === "contained") {
     return (
       <StyledButtonComponent colorInput={type}>
         {icon} {text}
@@ -14,18 +14,16 @@ const Button = ({ type, shape, text, icon }) => {
     );
   }
 
-  if (shape === "outlined") {
+  if (variant === "outlined") {
     return (
       <OutlineButton colorInput={type}>
         {icon} {text}
       </OutlineButton>
     );
   }
-  if (shape === "TextButton") {
-    return <ButtonText colorInput={type}>{text}</ButtonText>;
-  }
+  
 
-  return null;
+  return  <ButtonText colorInput={type}>{text}</ButtonText>;;
 };
 
 export default Button;
