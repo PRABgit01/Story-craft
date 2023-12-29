@@ -1,10 +1,6 @@
 import React from "react";
-import { ToastStyle } from "./Toast.style";
+import { StyledToast } from "./Toast.style";
 
-export const Toast=({type,text})=>{
-    return(
-        <ToastStyle type={type}>
-        {text}
-        </ToastStyle>
-    )
-}
+export const Toast = ({ type, text }) => {
+  return <StyledToast type={type}>{text}</StyledToast>;
+};

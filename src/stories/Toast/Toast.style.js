@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import theme from "../theme";
 
-export const ToastStyle = styled.button`
+export const StyledToast = styled.button`
   border: 1px solid ${({ type }) => theme?.[type]};
   font-size: 1rem;
   font-weight: 600;
@@ -14,7 +14,7 @@ export const ToastStyle = styled.button`
   cursor: pointer;
 `;
 
-export const ToastContainer = styled.div`
+export const StyledToastContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   gap: 5px;
