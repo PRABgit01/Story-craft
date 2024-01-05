@@ -21,11 +21,9 @@ const Button = ({ type, variant, text, icon }) => {
       </OutlineButton>
     );
   }
-  if (variant === "TextButton") {
-    return <ButtonText colorInput={type}>{text}</ButtonText>;
-  }
+  
 
-  return null;
+  return  <ButtonText colorInput={type}>{text}</ButtonText>;;
 };
 
 export default Button;
