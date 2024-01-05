@@ -45,13 +45,9 @@ export const IconButtons = () => (
 
 export const TextButtons = () => (
   <StyledContainer>
-    <Button type="primary"  text="PIRMARY LINK BUTTON" />
-    <Button
-      type="secondary"
-      variant="TextButton"
-      text="SECONDARY LINK BUTTON"
-    />
-    <Button type="success" variant="TextButton" text="SUCCESS LINK BUTTON" />
-    <Button type="warning" variant="TextButton" text="WARNING LINK BUTTON" />
+    <Button type="primary" text="PIRMARY LINK BUTTON" />
+    <Button type="secondary" text="SECONDARY LINK BUTTON" />
+    <Button type="success" text="SUCCESS LINK BUTTON" />
+    <Button type="warning" text="WARNING LINK BUTTON" />
   </StyledContainer>
 );
