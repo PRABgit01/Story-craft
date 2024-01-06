@@ -1,16 +1,30 @@
 import React from "react";
-import { LabelContainer, LabelInput, LabelText,PasswordText,PasswordInput } from "./Input.style";
+import {
+  InputField,
+  PrefixIcon,
+  StyleComponentInput,
+  SuffixIcon,
+} from "./Input.style";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-export const Input = () => {
+const Inputs = ({ type, id, placeholder, prefix, suffix }) => {
   return (
-    <LabelContainer>
-      <div>
-        <LabelText>Username *</LabelText>
-        <LabelInput></LabelInput>
-        <PasswordText>Password *</PasswordText>
-        <PasswordInput></PasswordInput>
-        <PasswordText>Password is incorrect</PasswordText>
-      </div>
-    </LabelContainer>
+    <>
+      <StyleComponentInput>
+        {prefix && (
+          <PrefixIcon>
+            <FontAwesomeIcon icon={prefix} />
+          </PrefixIcon>
+        )}
+        <InputField type={type} placeholder={placeholder} id={id} />
+        {suffix && (
+          <SuffixIcon>
+            <FontAwesomeIcon icon={suffix} />
+          </SuffixIcon>
+        )}
+      </StyleComponentInput>
+    </>
   );
 };
+
+export default Inputs;

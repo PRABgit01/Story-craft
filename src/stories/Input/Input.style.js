@@ -1,31 +1,42 @@
 import styled from "styled-components";
 import theme from "../theme";
 
-export const LabelContainer = styled.div`
+export const StyleComponentInput = styled.div`
   display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-`;
-export const LabelText = styled.p`
-  text-align: left;
-  font-family: sans-serif;
+  position: relative;
+  width: 100%;
 `;
 
-export const PasswordText = styled(LabelText)`
-  color: ${theme.dangerHover};
+export const PrefixIcon = styled.span`
+  position: absolute;
+  left: 5px;
+  top: 50%;
+  transform: translateY(-50%);
 `;
-export const LabelInput = styled.input`
-  border: 1px solid;
-  font-size: 1.8rem;
-  transition: 0.4s all ease;
+
+export const SuffixIcon = styled.span`
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+`;
+
+export const InputField = styled.input`
+  width: 100%;
+  width:520px;
+  padding: 14px 20px;
   border-radius: 5px;
-  padding: 0.2rem 0.5rem;
-  width: 150%;
+  margin: 10px 0;
+  color: #000;
+  border: 1px solid
+    ${(props) => (props.type === "password" ? theme.primary : "#000")};
 `;
 
-export const PasswordInput=styled(LabelInput)`
-  border: 1px solid ${theme.dangerHover};
-`
+export const InputContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 500px;
+`;

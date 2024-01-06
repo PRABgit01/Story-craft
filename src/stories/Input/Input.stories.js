@@ -1,11 +1,32 @@
 import React from "react";
-import { Input } from "./Input";
-import { LabelContainer } from "./Input.style";
+import { InputContainer } from "./Input.style";
+import Typography from "../Typograpgy/Typography";
+import { faOpensuse, faUserNinja } from "@fortawesome/free-solid-svg-icons";
 
-export default{
-    title:"Input "
-}
+import Inputs from "./Input";
 
-export const LabeledInput =()=>(
-    <Input/>
+export default {
+  title: "Input",
+};
+
+export const InputComponent = () => (
+  <>
+    <InputContainer>
+      <Typography htmltag="p" text="Username*"  />
+      <Inputs
+        type="text"
+        placeholder="Enter Your Name"
+        id="IDNo."
+        prefix={faUserNinja}
+      ></Inputs>
+      <Typography htmltag="p" text="Password*" type="primary" />
+      <Inputs
+        type="password"
+        placeholder="password here"
+        id="IDNo."
+        suffix={faUserNinja}
+      ></Inputs>
+      <Typography htmltag="p" text="Password is incorrect" type="primary" />
+    </InputContainer>
+  </>
 );
