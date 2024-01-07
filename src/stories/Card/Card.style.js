@@ -1,109 +1,105 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import theme from "../theme";
 
-export const CardContainer = styled.div`
-  /* background-color: pink; */
-  display: flex;
-  justify-content: center;
-  padding: 5%;
-`;
-export const CardBox = styled.div`
-  display: flex;
-  flex-flow: column;
-  height: max-content;
-  max-width: 19rem;
-  background-color: ${theme.white};
+export const StyledCommonCard = css`
+  width: 100%;
+  max-width: 300px;
+  height: auto;
   border-radius: 5px;
-  padding: 7px;
-  transition: 300ms ease;
-  &:hover,
-  &:active {
-    box-shadow: 5px 4px 8px rgba(3, 0, 0, 0.1);
-  }
+  padding: 10px 10px;
+  background-color: ${theme.white};
 `;
 
-export const CardTitle = styled.h3`
-  font-family: sans-serif;
+export const StyledTitle = styled.h2`
   color: ${theme.primary};
-  padding-bottom: 2px;
 `;
 
-export const CardPara = styled.p`
-  font-family: sans-serif;
+export const StyledDiscription = styled.p`
   color: ${theme.secondary};
+
 `;
-export const CardBadge = styled.img`
+
+export const StyledSimpleCard = styled.div`
+  ${StyledCommonCard}
+  max-width: 300px;
+  display: block;
+  border: 3px solid ${theme.white};
+  &:hover {
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2); 
+  }
+`;
+
+export const StyledCardBadge = styled.div`
+  ${StyledCommonCard}
+  max-width: 300px;
+  &:hover {
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2); 
+  }
+`;
+
+export const StyledImage = styled.img`
   border-radius: 5px;
-  width: 100%;
 `;
-export const BadgeText = styled.div`
+
+export const StyledBadge = styled.div`
   position: absolute;
-  font-family: sans-serif;
-  font-weight: 600;
-  font-size: 0.9rem;
-  top: 87px;
-  left: 366px;
+  top: 30px;
+  left: 16px;
   background-color: ${theme.primary};
-  padding: 2px;
   color: ${theme.white};
+  font-weight: 600;
+  font-size: 14px;
+  padding: 5px 10px;
 `;
 
-export const DissMissBadge = styled(BadgeText)`
-  top: 95px;
-  left: 630px;
-  padding: 0.5rem 0.7rem;
+export const StyledDissmiss = styled.div`
+  position: absolute;
+  top: 37px;
+  left: 289px;
+  background-color: ${theme.primary};
   font-weight: 600;
-  &:hover,
-  &:active {
-    box-shadow: 5px 4px 8px rgba(3, 0, 0, 0.1);
+  font-size: 14px;
+  padding: 5px 10px;
+  color: ${theme.white};
+  &:hover {
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2); 
   }
 `;
 
-export const MiddleText = styled(BadgeText)`
-  top: 160px;
-  left: 470px;
-  padding: 0.5rem 0.7rem;
-  font-weight: 600;
-  background-color: transparent;
-  font-size: 1rem;
-`;
-export const OutlineButton = styled.button`
-  border: 1px solid ${theme.primary};
-  font-size: 1rem;
-  font-weight: 600;
-  width: 100%;
-  background-color: transparent;
-  color: ${theme.primary};
-  border-radius: 2px;
-  padding: 10px 20px;
+export const StyledOverLay = styled.div`
+  position: absolute;
+  top: 105px;
+  left: 115px;
   text-align: center;
-  text-decoration: none;
-  cursor: pointer;
-  &:hover,
-  &:active {
-    background-color: ${theme.primary};
-    color: ${theme.white};
-  }
+  color: ${theme.white};
+  font-weight: 600;
+  font-family: "Rubik", sans-serif;
+  font-size: 17px;
+  padding: 0.5rem 1rem;
 `;
 
-export const SmallImage = styled(CardBadge)`
-  width: 15%;
-  height: 25%;
-  padding-top: 2.1%;
-`;
-
-export const HorizontalCard = styled.div`
+export const StyledHorizontalCard = styled.div`
   display: flex;
-  gap: 0.3rem;
-  flex-flow: row;
-  height: max-content;
-  max-width: 45rem;
+  width: 100%;
+  max-width: 700px;
+  gap: 10px;
   background-color: ${theme.white};
   border-radius: 5px;
-  padding: 0.5rem;
-  transition: 500ms;
-  &:hover {
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
-  }
+  font-size: 12px;
+  height: auto;
+  padding: 10px;
 `;
 
+export const StyledContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
+export const StyledHoriZontalImage = styled.img`
+  width: 100%;
+  max-width: 100px;
+  height: 100%;
+  max-height: 80px;
+  border-radius: 5px;
+  font-size: 6px;
+`;

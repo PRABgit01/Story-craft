@@ -1,100 +1,38 @@
 import React from "react";
 import {
-  BadgeText,
-  CardBadge,
-  CardBox,
-  CardContainer,
-  CardPara,
-  CardTitle,
-  DissMissBadge,
-  OutlineButton,
-  MiddleText,
-  HorizontalCard,
-  SmallImage,
+  StyledDiscription,
+  StyledImage,
+  StyledTitle,
+  StyledBadge,
+  StyledDissmiss,
+  StyledOverLay,
+  StyledContainer,
 } from "./Card.style";
+import Button from "../Button/Button";
 
-export const Card = ({
-  cardTitle,
-  cardContent,
-  variant,
-  url,
+const Cards = ({
+  title,
+  discription,
   alt,
-  BadgeTxt,
-  CheckoutText,
-  OutOffStock,
+  imageSrc,
+  badge,
+  dismiss,
+  button,
+  overlayText,
 }) => {
-  if (variant === "SimpleTextCard") {
-    return (
-      <CardContainer>
-        <CardBox>
-          <div>
-            <CardTitle>{cardTitle}</CardTitle>
-            <CardPara>{cardContent}</CardPara>
-          </div>
-        </CardBox>
-      </CardContainer>
-    );
-  }
-
-  if (variant === "CardWithBadges") {
-    return (
-      <CardContainer>
-        <CardBox>
-          <BadgeText>{BadgeTxt}</BadgeText>
-          <CardBadge src={url} alt={alt} />
-          <div>
-            <CardTitle>{cardTitle}</CardTitle>
-            <CardPara>{cardContent}</CardPara>
-          </div>
-        </CardBox>
-      </CardContainer>
-    );
-  }
-  if (variant === "CardsWithDismiss") {
-    return (
-      <CardContainer>
-        <CardBox>
-          <DissMissBadge>{BadgeTxt}</DissMissBadge>
-          <CardBadge src={url} alt={alt} />
-          <div>
-            <CardTitle>{cardTitle}</CardTitle>
-            <CardPara>{cardContent}</CardPara>
-            <OutlineButton>{CheckoutText}</OutlineButton>
-          </div>
-        </CardBox>
-      </CardContainer>
-    );
-  }
-
-  if (variant === "CardsWithTextOverlay") {
-    return (
-      <CardContainer>
-        <CardBox>
-          <DissMissBadge>{BadgeTxt}</DissMissBadge>
-          <CardBadge src={url} alt={alt} />
-          <MiddleText>{OutOffStock}</MiddleText>
-          <div>
-            <CardTitle>{cardTitle}</CardTitle>
-            <CardPara>{cardContent}</CardPara>
-            <OutlineButton>{CheckoutText}</OutlineButton>
-          </div>
-        </CardBox>
-      </CardContainer>
-    );
-  }
-
-  if (variant === "HorizontalCard") {
-    return (
-      <CardContainer>
-        <HorizontalCard>
-          <SmallImage src={url} alt={alt} />
-          <div>
-            <CardTitle>{cardTitle}</CardTitle>
-            <CardPara>{cardContent}</CardPara>
-            <OutlineButton>{CheckoutText}</OutlineButton>
-          </div>
-        </HorizontalCard>
-      </CardContainer>
-    );
-  }
+  return (
+    <>
+      <StyledContainer>
+        {badge && <StyledBadge>{badge}</StyledBadge>}
+        {dismiss && <StyledDissmiss>{dismiss}</StyledDissmiss>}
+        {imageSrc && <StyledImage src={imageSrc} alt={alt}></StyledImage>}
+        <StyledTitle>{title}</StyledTitle>
+        <StyledDiscription>{discription}</StyledDiscription>
+        {button && <Button type="primary" variant="outlined" text={button} />}
+        {overlayText && <StyledOverLay>{overlayText}</StyledOverLay>}
+      </StyledContainer>
+    </>
+  );
 };
+
+export default Cards;
