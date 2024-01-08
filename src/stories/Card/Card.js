@@ -10,21 +10,21 @@ import {
 } from "./Card.style";
 import Button from "../Button/Button";
 
-const Cards = ({
+const Card = ({
   title,
   discription,
   alt,
   imageSrc,
-  badge,
-  dismiss,
+  label,
+  closeIcon,
   button,
   overlayText,
 }) => {
   return (
     <>
       <StyledContainer>
-        {badge && <StyledBadge>{badge}</StyledBadge>}
-        {dismiss && <StyledDissmiss>{dismiss}</StyledDissmiss>}
+        {label && <StyledBadge>{label}</StyledBadge>}
+        {closeIcon && <StyledDissmiss>{closeIcon}</StyledDissmiss>}
         {imageSrc && <StyledImage src={imageSrc} alt={alt}></StyledImage>}
         <StyledTitle>{title}</StyledTitle>
         <StyledDiscription>{discription}</StyledDiscription>
@@ -35,4 +35,4 @@ const Cards = ({
   );
 };
 
-export default Cards;
+export default Card;

@@ -16,7 +16,6 @@ export const StyledTitle = styled.h2`
 
 export const StyledDiscription = styled.p`
   color: ${theme.secondary};
-
 `;
 
 export const StyledSimpleCard = styled.div`
@@ -24,6 +23,7 @@ export const StyledSimpleCard = styled.div`
   max-width: 300px;
   display: block;
   border: 3px solid ${theme.white};
+
   &:hover {
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.2); 
   }
@@ -32,6 +32,7 @@ export const StyledSimpleCard = styled.div`
 export const StyledCardBadge = styled.div`
   ${StyledCommonCard}
   max-width: 300px;
+
   &:hover {
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.2); 
   }
@@ -61,6 +62,7 @@ export const StyledDissmiss = styled.div`
   font-size: 14px;
   padding: 5px 10px;
   color: ${theme.white};
+
   &:hover {
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.2); 
   }

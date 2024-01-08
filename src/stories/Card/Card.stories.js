@@ -1,5 +1,5 @@
 import React from "react";
-import Cards from "./Card";
+import Card from "./Card";
 import {
   StyledSimpleCard,
   StyledCardBadge,
@@ -8,17 +8,17 @@ import {
 } from "./Card.style";
 
 export default {
-  title: "Cards",
+  title: "Card",
 };
 
 export const SimpleCard = () => {
   return (
     <>
       <StyledSimpleCard>
-        <Cards
+        <Card
           title="Eren Yeager"
           discription="Eren Yeager was a former member of the Survey Corps. He was the main protagonist of Attack on Titan. He lived in Shiganshina District,"
-        ></Cards>
+        ></Card>
       </StyledSimpleCard>
     </>
   );
@@ -28,13 +28,13 @@ export const CardWithBadges = () => {
   return (
     <>
       <StyledCardBadge>
-        <Cards
-          badge="The Traning"
+        <Card
+          label="The Traning"
           imageSrc="https://picsum.photos/300/200/?blur"
           alt="Badge"
           title="Survey Corps"
           discription="In the year 847, Eren, Mikasa Ackerman, and Armin Arlert joined the 104th Training Corps. The three graduated with Eren ranking 5th best, and they joined the Survey Corps following the battle of Trost District"
-        ></Cards>
+        ></Card>
       </StyledCardBadge>
     </>
   );
@@ -44,32 +44,32 @@ export const CardWithDismiss = () => {
   return (
     <>
       <StyledCardBadge>
-        <Cards
+        <Card
           dismiss="x"
           imageSrc="https://picsum.photos/300/200/?blur"
           alt="Badge"
           title="Survey Corps Story"
           discription="RS. 250"
           button="checkout"
-        ></Cards>
+        ></Card>
       </StyledCardBadge>
     </>
   );
 };
 
-export const CardsWithTextOverlay = () => {
+export const CardWithTextOverlay = () => {
   return (
     <>
       <StyledCardBadge>
-        <Cards
-          dismiss="x"
+        <Card
+          closeIcon="x"
           imageSrc="https://picsum.photos/300/200/?blur"
           alt="Badge"
           title="Eren Yeager"
           discription="RS. 250"
           button="Out Of stock"
           overlayText="out of stock"
-        ></Cards>
+        ></Card>
       </StyledCardBadge>
     </>
   );
@@ -84,14 +84,14 @@ export const HorizontalCard = () => {
           src="https://picsum.photos/300/200/?blur"
           alt="Badge"
         ></StyledHoriZontalImage>
-        <Cards
+        <Card
           title="Founding Titan"
           discription="Despite having the ability to control the Titans, no Founding Titan of
           royal blood after the Great Titan War expressed any desire to get rid
           of the Titans outside the Walls, even if the inheritor had expressed
           that desire previously."
           button="Read more"
-        ></Cards>
+        ></Card>
       </StyledHorizontalCard>
     </>
   );
