@@ -7,23 +7,23 @@ export const StyleComponentInput = styled.div`
   width: 100%;
 `;
 
-export const PrefixIcon = styled.span`
+export const StyledPrefixIcon = styled.span`
   position: absolute;
   left: 5px;
   top: 50%;
   transform: translateY(-50%);
 `;
 
-export const SuffixIcon = styled.span`
+export const StyledSuffixIcon = styled.span`
   position: absolute;
   right: 15px;
   top: 50%;
   transform: translateY(-50%);
 `;
 
-export const InputField = styled.input`
+export const StyledInputField = styled.input`
   width: 100%;
-  width:520px;
+  width: 520px;
   padding: 14px 20px;
   border-radius: 5px;
   margin: 10px 0;
@@ -32,7 +32,7 @@ export const InputField = styled.input`
     ${(props) => (props.type === "password" ? theme.primary : "#000")};
 `;
 
-export const InputContainer = styled.div`
+export const StyledInputContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;

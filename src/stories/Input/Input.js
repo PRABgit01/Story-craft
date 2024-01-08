@@ -1,9 +1,9 @@
 import React from "react";
 import {
-  InputField,
-  PrefixIcon,
+  StyledInputField,
+  StyledPrefixIcon,
   StyleComponentInput,
-  SuffixIcon,
+  StyledSuffixIcon,
 } from "./Input.style";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
@@ -12,15 +12,15 @@ const Inputs = ({ type, id, placeholder, prefix, suffix }) => {
     <>
       <StyleComponentInput>
         {prefix && (
-          <PrefixIcon>
+          <StyledPrefixIcon>
             <FontAwesomeIcon icon={prefix} />
-          </PrefixIcon>
+          </StyledPrefixIcon>
         )}
-        <InputField type={type} placeholder={placeholder} id={id} />
+        <StyledInputField type={type} placeholder={placeholder} id={id} />
         {suffix && (
-          <SuffixIcon>
+          <StyledSuffixIcon>
             <FontAwesomeIcon icon={suffix} />
-          </SuffixIcon>
+          </StyledSuffixIcon>
         )}
       </StyleComponentInput>
     </>

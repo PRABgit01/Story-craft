@@ -1,5 +1,5 @@
 import React from "react";
-import { InputContainer } from "./Input.style";
+import { StyledInputContainer } from "./Input.style";
 import Typography from "../Typograpgy/Typography";
 import { faOpensuse, faUserNinja } from "@fortawesome/free-solid-svg-icons";
 
@@ -11,22 +11,22 @@ export default {
 
 export const InputComponent = () => (
   <>
-    <InputContainer>
-      <Typography htmltag="p" text="Username*"  />
+    <StyledInputContainer>
+      <Typography htmltag="p" text="Username*" />
       <Inputs
         type="text"
         placeholder="Enter Your Name"
-        id="IDNo."
+        id="Id Name"
         prefix={faUserNinja}
       ></Inputs>
       <Typography htmltag="p" text="Password*" type="primary" />
       <Inputs
         type="password"
         placeholder="password here"
-        id="IDNo."
+        id="Id Name"
         suffix={faUserNinja}
       ></Inputs>
       <Typography htmltag="p" text="Password is incorrect" type="primary" />
-    </InputContainer>
+    </StyledInputContainer>
   </>
 );
